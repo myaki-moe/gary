@@ -1,0 +1,43 @@
+chassis_lf_pid:
+  ros__parameters:
+    controller_type: gary_controller/PIDController
+    command_interface: chassis_left_front/raw
+    state_interface: chassis_left_front/velocity
+    kp: 1000.0
+    ki: 5.0
+    kd: 0.0
+    max_out: 16000.0
+    max_iout: 100.0
+
+chassis_lb_pid:
+  ros__parameters:
+    controller_type: gary_controller/PIDController
+    command_interface: chassis_left_back/raw
+    state_interface: chassis_left_back/velocity
+    kp: 1000.0
+    ki: 5.0
+    kd: 0.0
+    max_out: 16000.0
+    max_iout: 100.0
+
+chassis_rf_pid:
+  ros__parameters:
+    controller_type: gary_controller/PIDController
+    command_interface: chassis_right_front/raw
+    state_interface: chassis_right_front/velocity
+    kp: 1000.0
+    ki: 5.0
+    kd: 0.0
+    max_out: 16000.0
+    max_iout: 100.0
+
+chassis_rb_pid:
+  ros__parameters:
+    controller_type: gary_controller/PIDController
+    command_interface: chassis_right_back/raw
+    state_interface: chassis_right_back/velocity
+    kp: 1000.0
+    ki: 5.0
+    kd: 0.0
+    max_out: 16000.0
+    max_iout: 100.0

@@ -1,0 +1,4 @@
+agg_topic: /diagnostics_agg
+diagnose_topic: /diagnostics
+stale_threshold: 1.0
+update_freq: 10.0

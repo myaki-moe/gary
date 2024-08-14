@@ -1,0 +1,42 @@
+# - - -
+# 只有pid set是publish的
+# 设定值-set 反馈值-feedback 输出值-out
+# command_interface 是 out
+# state_interface 是 feedback
+# - - -
+# left_up_speed_pid:  kp=20,  ki=0.1, kd=0  |(内环)
+# left_up_height_pid: kp=0.3, ki=0.0, kd=0  |(外度)
+# 林总代码是位置（高度）环套了一个速度环
+liftup_left_pid:
+  ros__parameters:
+    controller_type: gary_controller/DualLoopPIDController
+    inner_command_interface: liftup_left/velocity
+    inner_state_interface: liftup_left/velocity
+    inner_kp: 20
+    inner_ki: 0.1
+    inner_kd: 0.0
+    inner_max_out: 15000
+    inner_max_iout: 0.0
+    outer_state_interface: liftup_left/position
+    outer_kp: 20.0
+    outer_ki: 0.1
+    outer_kd: 0.0
+    outer_max_out: 2500.0
+    outer_max_iout: 0.0
+
+liftup_right_pid:
+  ros__parameters:
+    controller_type: gary_controller/DualLoopPIDController
+    inner_command_interface: liftup_right/velocity
+    inner_state_interface: liftup_right/velocity
+    inner_kp: 20
+    inner_ki: 0.1
+    inner_kd: 0.0
+    inner_max_out: 15000
+    inner_max_iout: 0.0
+    outer_state_interface: liftup_right/position
+    outer_kp: 20.0
+    outer_ki: 0.1
+    outer_kd: 0.0
+    outer_max_out: 2500.0
+    outer_max_iout: 0.0

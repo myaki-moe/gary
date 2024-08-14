@@ -1,0 +1,6 @@
+remote_control_topic: /remote_control
+shooter_wheel_pid_target: 8500.0
+shooter_wheel_topic: /rc_shooter_pid_set
+trigger_wheel_pid_target: -3000.0
+trigger_wheel_topic: /rc_trigger_pid_set
+update_freq: 100.0

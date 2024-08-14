@@ -1,0 +1,8 @@
+gimbal_pitch_max: 0.72477
+gimbal_pitch_min: -0.45125
+k_autoaim: 0.2
+k_mouse: 0.08
+k_rc: 0.08
+pitch_set_topic: /gimbal_pitch_set
+remote_control_topic: /remote_control
+yaw_set_topic: /gimbal_yaw_set

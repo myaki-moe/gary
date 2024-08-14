@@ -1,0 +1,53 @@
+chassis_lf_pid:
+  ros__parameters:
+    controller_type: gary_controller/PIDController
+    command_interface: chassis_left_front/effort
+    state_interface: chassis_left_front/velocity
+    kp: 1.0
+    ki: 0.003
+    kd: 0.0
+    max_out: 6.0
+    max_iout: 0.75
+
+chassis_lb_pid:
+  ros__parameters:
+    controller_type: gary_controller/PIDController
+    command_interface: chassis_left_back/effort
+    state_interface: chassis_left_back/velocity
+    kp: 1.0
+    ki: 0.003
+    kd: 0.0
+    max_out: 6.0
+    max_iout: 0.75
+
+chassis_rf_pid:
+  ros__parameters:
+    controller_type: gary_controller/PIDController
+    command_interface: chassis_right_front/effort
+    state_interface: chassis_right_front/velocity
+    kp: 1.0
+    ki: 0.003
+    kd: 0.0
+    max_out: 6.0
+    max_iout: 0.75
+
+chassis_rb_pid:
+  ros__parameters:
+    controller_type: gary_controller/PIDController
+    command_interface: chassis_right_back/effort
+    state_interface: chassis_right_back/velocity
+    kp: 1.0
+    ki: 0.003
+    kd: 0.0
+    max_out: 6.0
+    max_iout: 0.75
+
+gimbal_follow_pid:
+  ros__parameters:
+    controller_type: gary_controller/PIDController
+    state_interface: gimbal_yaw/position
+    kp: 5.0
+    ki: 0.0
+    kd: 0.5
+    max_out: 5.0
+    max_iout: 0.0

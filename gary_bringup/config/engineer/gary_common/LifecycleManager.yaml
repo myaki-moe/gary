@@ -1,0 +1,10 @@
+diag_freq: 10.0
+diagnose_topic: /diagnostics
+node_names:
+- /diagnostic_aggregator
+- /dr16_receiver
+- /socket_can_monitor
+- /mecanum_chassis_solver
+- /chassis_teleop
+respawn: false
+update_rate: 10.0

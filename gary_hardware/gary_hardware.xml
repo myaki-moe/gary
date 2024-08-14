@@ -1,0 +1,19 @@
+<library path="gary_hardware">
+
+    <class name="gary_hardware/RMIMUSensor"
+           type="gary_hardware::RMIMUSensor"
+           base_class_type="hardware_interface::SensorInterface">
+        <description>
+            RoboMaster IMU sensor
+        </description>
+    </class>
+
+    <class name="gary_hardware/RMMotorSystem"
+           type="gary_hardware::RMMotorSystem"
+           base_class_type="hardware_interface::SystemInterface">
+        <description>
+            RoboMaster Motor system
+        </description>
+    </class>
+
+</library>

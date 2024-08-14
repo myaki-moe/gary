@@ -1,0 +1,10 @@
+diagnostic_topic: /diagnostics_agg
+left_shooter_wheel_diag_name: fric_left
+left_shooter_wheel_send_topic: /fric_left_pid/cmd
+right_shooter_wheel_diag_name: fric_right
+right_shooter_wheel_send_topic: /fric_right_pid/cmd
+shooter_wheel_receive_topic: /rc_shooter_pid_set
+trigger_wheel_diag_name: trigger
+trigger_wheel_receive_topic: /rc_trigger_pid_set
+trigger_wheel_send_topic: /trigger_pid/cmd
+update_freq: 100.0

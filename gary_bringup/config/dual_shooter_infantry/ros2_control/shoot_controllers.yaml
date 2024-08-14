@@ -1,0 +1,32 @@
+fric_left_pid:
+  ros__parameters:
+    controller_type: gary_controller/PIDController
+    command_interface: fric_left/raw
+    state_interface: fric_left/rpm
+    kp: 10.0
+    ki: 0.15
+    kd: 0.0
+    max_out: 16000.0
+    max_iout: 5020.0
+
+fric_right_pid:
+  ros__parameters:
+    controller_type: gary_controller/PIDController
+    command_interface: fric_right/raw
+    state_interface: fric_right/rpm
+    kp: 10.0
+    ki: 0.15
+    kd: 0.0
+    max_out: 16000.0
+    max_iout: 5020.0
+
+trigger_pid:
+  ros__parameters:
+    controller_type: gary_controller/PIDController
+    command_interface: trigger/raw
+    state_interface: trigger/rpm
+    kp: 2.327105669325773
+    ki: 0.001454441043328608
+    kd: 0.0
+    max_out: 10000.0
+    max_iout: 9000.0

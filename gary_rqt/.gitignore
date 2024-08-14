@@ -1,0 +1,10 @@
+# IDEA
+.idea/
+.vscode/
+
+# ENV
+venv/
+
+# Python
+__pycache__/
+*.egg-info/

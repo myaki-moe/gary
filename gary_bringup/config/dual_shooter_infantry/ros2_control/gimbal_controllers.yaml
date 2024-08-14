@@ -1,0 +1,60 @@
+gimbal_imu_broadcaster:
+  ros__parameters:
+    controller_type: imu_sensor_broadcaster/IMUSensorBroadcaster
+    sensor_name: gimbal_imu
+    frame_id: gimbal_imu
+
+gimbal_pitch_pid:
+  ros__parameters:
+    controller_type: gary_controller/DualLoopPIDControllerWithFilter
+    inner_command_interface: gimbal_pitch/raw
+    inner_state_interface: gimbal_imu/angular_velocity.y
+    inner_kp: -6000.0
+    inner_ki: -45.0
+    inner_kd: -35000000.0
+    inner_max_out: 15000.0
+    inner_max_iout: 15000.0
+    inner_p_filter_coefficient: 0.95122
+    inner_d_filter_coefficient: 0.99995
+    outer_state_interface: gimbal_imu/euler.y
+    outer_kp: -10.0
+    outer_ki: 0.0
+    outer_kd: -0.7
+    outer_max_out: 10.0
+    outer_max_iout: 0.0
+    outer_p_filter_coefficient: 0.0
+    outer_d_filter_coefficient: 0.0
+
+#gimbal_pitch_pid:
+#  ros__parameters:
+#    controller_type: gary_controller/PIDControllerWithFilter
+#    command_interface: gimbal_pitch/raw
+#    state_interface: gimbal_imu/angular_velocity.y
+#    kp: -6000.0
+#    ki: -45.0
+#    kd: -35000000.0
+#    max_out: 15000.0
+#    max_iout: 15000.0
+#    p_filter_coefficient: 0.95122
+#    d_filter_coefficient: 0.99995
+
+gimbal_yaw_pid:
+  ros__parameters:
+    controller_type: gary_controller/DualLoopPIDControllerWithFilter
+    inner_command_interface: gimbal_yaw/raw
+    inner_state_interface: gimbal_imu/angular_velocity.z
+    inner_kp: 8000.0
+    inner_ki: 100.0
+    inner_kd: 0.0
+    inner_max_out: 30000.0
+    inner_max_iout: 0.0
+    inner_p_filter_coefficient: 0.95122
+    inner_d_filter_coefficient: 0.99995
+    outer_state_interface: gimbal_imu/euler_sum.x
+    outer_kp: -14.0
+    outer_ki: 0.0
+    outer_kd: 1.52
+    outer_max_out: 10.0
+    outer_max_iout: 0.0
+    outer_p_filter_coefficient: 0.0
+    outer_d_filter_coefficient: 0.0

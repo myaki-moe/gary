@@ -1,0 +1,12 @@
+cmd_topic: /cmd_vel
+output_lf_topic: /chassis_lf_pid/cmd
+output_lb_topic: /chassis_lb_pid/cmd
+output_rf_topic: /chassis_rf_pid/cmd
+output_rb_topic: /chassis_rb_pid/cmd
+motor_lf_hw_id: chassis_left_front
+motor_lb_hw_id: chassis_left_back
+motor_rf_hw_id: chassis_right_front
+motor_rb_hw_id: chassis_right_back
+a: 0.22615
+b: 0.201
+r: 0.06356

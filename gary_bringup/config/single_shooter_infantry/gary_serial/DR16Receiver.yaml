@@ -1,0 +1,7 @@
+baudrate: 100000
+diag_freq: 10.0
+diagnostic_topic: /diagnostics
+override_diag_device_name: ''
+send_topic: /remote_control
+serial_port: /dev/ttyDBUS0
+update_freq: 100.0

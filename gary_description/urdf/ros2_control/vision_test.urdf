@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot name="rrbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <ros2_control name="gimbal_imu" type="sensor">
+        <hardware>
+            <plugin>gary_hardware/RMIMUSensor</plugin>
+            <param name="can_bus">can3-7</param>
+            <param name="orientation_can_id">0x100</param>
+            <param name="gyro_can_id">0x101</param>
+            <param name="accel_can_id">0x102</param>
+            <param name="update_rate">250</param>
+        </hardware>
+
+    </ros2_control>
+
+</robot>
